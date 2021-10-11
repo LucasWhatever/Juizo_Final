@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>juizo final</title>
+    <script>
+      var nome, nota, nota2, cont, numeroDeAlunos, contAprovados=0, contReprovados=0, percentualAprovados=0,percentualAprovados=0, mediaDaturma=0
+      
+      numeroDeAlunos=Number(prompt("Quantos alunos tem na turma?"))
+      cont=0
+      while(cont<numeroDeAlunos)
+      {
+        nome= prompt("digite seu nome:")
+        nota= Number(prompt("digite sua nota:"))
+        
+        if(nota>=7)
+        {
+         document.write("<br>Parabens você vai subir "+nome+ ",porque sua nota é :"+nota)
+         contAprovados++
+         
+        }
+        else
+        {
+         document.write("<br>Foi mal, você vai descer "+nome+ ",porque sua nota é "+nota)
+         contReprovados++
+        }
+        mediaDaturma= mediaDaturma+nota
+        cont++
+    
+        
+    }
+
+    mediaDaturma= mediaDaturma/numeroDeAlunos
+    percentualAprovados= (contAprovados/numeroDeAlunos)*100
+
+    document.write("<br>Aprovados: "+contAprovados)
+    document.write("<br>Reprovados: "+contReprovados)
+    document.write("<br>Percentual de Aprovados: "+percentualAprovados.toFixed(2)+"  % ")
+    document.write("<br>Média da Turma: "+ mediaDaturma.toFixed(2))
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>
